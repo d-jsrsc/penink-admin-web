@@ -2,14 +2,19 @@
   "name": "penink-admin-web",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "NODE_ENV=development node server.js",
     "build": "next build",
     "start": "next start",
+    "zip": "rm -rf release/* && node scripts/zip.js",
     "lint": "next lint"
   },
   "dependencies": {
     "axios": "^0.24.0",
+    "config": "^3.3.6",
+    "github-markdown-css": "^5.1.0",
+    "http-proxy": "^1.18.1",
     "next": "12.0.7",
+    "prismjs": "^1.25.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "swr": "^1.1.2-beta.0"
@@ -17,6 +22,7 @@
   "devDependencies": {
     "@types/node": "17.0.2",
     "@types/react": "17.0.37",
+    "adm-zip": "^0.5.9",
     "eslint": "8.5.0",
     "eslint-config-next": "12.0.7",
     "typescript": "4.5.4"
